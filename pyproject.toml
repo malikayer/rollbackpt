@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "malikayer-rollbackpt"
+version = "0.1.0"
+description = "按状态一致性分析每个检查点，标出回滚会留下脏数据的位置"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "malikayer" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://malikayer.github.io"
+Repository = "https://github.com/malikayer/rollbackpt"
+Issues = "https://github.com/malikayer/rollbackpt/issues"
+
+[project.scripts]
+rollbackpt = "rollbackpt:main"
+
+[tool.setuptools]
+py-modules = ["rollbackpt"]
